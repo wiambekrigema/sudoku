@@ -1,4 +1,4 @@
-class Sudoku :
+class Sudoku:
   def __init__(self, nb):
         self.nb = nb
         self.grille = [[0 for i in range (9)] for j in range(9)]
