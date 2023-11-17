@@ -22,3 +22,16 @@ class Sudoku:
              if self.grille[i + start_row][j + start_col] == num:
                 return False
      return True
+
+  def solve(self):
+       for i in range(9):
+           for j in range(9):
+               if self.board[i][j] == 0:
+                  for num in range(1, 10):
+                      if self.is_valid(i, j, num):
+                          self.board[i][j] = num
+                          if self.solve():
+                              return True
+                          self.board[i][j] = 0
+                  return False
+       return True
