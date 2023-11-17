@@ -6,3 +6,6 @@ def main():
   sudoku.put_number()
   print("Solving the game...")
   sudoku.solve()
+
+if __name__ == "__main__":
+   main()
